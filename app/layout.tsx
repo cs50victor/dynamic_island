@@ -1,9 +1,9 @@
 import { Analytics } from "@vercel/analytics/react"
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans, Rubik, Schibsted_Grotesk } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const display = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "600", "700" ] });
 
 export const metadata: Metadata = {
   title: "Dynamic Island",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased">
-      <body className={inter.className}>
+      <body className={display.className}>
         {children}
         <Analytics />
       </body>
